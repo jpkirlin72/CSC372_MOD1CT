@@ -1,18 +1,19 @@
 package edu.jaredkirlin.csc372.mod1ct;
 
 
+
 public class BankAccount {
 	private String firstName;
     private String lastName;
     private int accountID;
     private double balance;
 
-   
+//constructor    
     public BankAccount() {
         balance = 0.0;
     }
     
-    //deposit and withdrawal
+//deposit and withdrawal
     public void deposit(double amount) {
     	balance += amount;
     }
@@ -20,7 +21,7 @@ public class BankAccount {
     	balance -= amount;
     }
     
-    //setters
+//setters
     public void setFirstName(String name) {
     	firstName = name;
     }
@@ -31,8 +32,7 @@ public class BankAccount {
     	accountID = id;
     }
     
-    //getters
-    
+//getters    
     public String getFirstName() {
     	return firstName;
     }
@@ -43,12 +43,12 @@ public class BankAccount {
     	return accountID;
     }
     
-    //balance getter
+//balance getter
     public double getBalance() {
     	return balance;
     }
     
-    //account summary
+//account summary
     public void accountSummary() {
     	System.out.println("Name: " + firstName + " " + lastName);
     	System.out.println("Account ID: " + accountID);

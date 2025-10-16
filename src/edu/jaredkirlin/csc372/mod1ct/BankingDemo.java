@@ -2,7 +2,7 @@ package edu.jaredkirlin.csc372.mod1ct;
 
 public class BankingDemo {
 	
-	//test 1: simple setters/getters
+	//test 1: simple setters/getters/deposit/withdrawal
 
 	public static void main(String[] args) {
 		BankAccount account = new BankAccount();
