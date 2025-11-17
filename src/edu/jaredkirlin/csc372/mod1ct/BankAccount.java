@@ -8,17 +8,28 @@ public class BankAccount {
     private int accountID;
     private double balance;
 
-//constructor    
+//constructors
     public BankAccount() {
         balance = 0.0;
     }
-    
-//deposit and withdrawal
-    public void deposit(double amount) {
-    	balance += amount;
+    public BankAccount(String firstName, String lastName, int accountID, double initialBalance) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.accountID = accountID;
+        this.balance = initialBalance;
     }
+    
+// deposit and withdrawal with simple validation
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
     public void withdrawal(double amount) {
-    	balance -= amount;
+        if (amount > 0) {
+            balance -= amount;
+        }
     }
     
 //setters

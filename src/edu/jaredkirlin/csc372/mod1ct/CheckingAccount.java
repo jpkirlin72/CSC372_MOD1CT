@@ -4,14 +4,25 @@ public class CheckingAccount extends BankAccount {
 	 
 	private double interestRate;
 	
+//constructors	
+	public CheckingAccount() {
+	        super();
+	    }
+	
+    public CheckingAccount(String firstName, String lastName, int accountID, double initialBalance, double interestRate) {
+    	super(firstName, lastName, accountID, initialBalance);
+    	this.interestRate = interestRate;
+}
+	
 //process withdrawal	 
 	public void processWithdrawal(double amount) {
 		withdrawal(amount);
-		if (getBalance() < 0 );
+		if (getBalance() < 0 ) {
 			withdrawal(30.0);
 			System.out.println("Overdraft! $30 has been charged to your account.");
-			System.out.println("New balance: $" + getBalance());	    	
-	    }
+			System.out.println("New balance: $" + getBalance());	
+		}
+	}
 	
 //display account with interest rate added	
 	public void displayAccount() {
